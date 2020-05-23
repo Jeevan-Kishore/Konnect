@@ -15,7 +15,6 @@ function App() {
       >
         <div className={styles.container}>
           <Card />
-          here
         </div>
       </div>
     </>

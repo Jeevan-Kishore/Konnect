@@ -1,7 +1,7 @@
 {
   "name": "konnect",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://jeevan-kishore.github.io/konnect-web",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
