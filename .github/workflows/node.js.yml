@@ -38,8 +38,6 @@ jobs:
     - name: Commit files
       working-directory: ./konnect-web
       run: |
-        git init
-        git config --local --unset-all "http.https://github.com/.extraheader"
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git remote -v
