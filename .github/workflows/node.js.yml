@@ -34,7 +34,8 @@ jobs:
         git remote -v
         git remote set-url origin https://github.com/Jeevan-Kishore/konnect-web.git
         git remote -v
-        git commit -m "Add build changes" -a
+        git add .
+        git commit -m "Add build changes"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
