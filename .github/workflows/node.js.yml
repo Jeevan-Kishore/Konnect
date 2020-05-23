@@ -26,17 +26,19 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: cd ./build
-    - name: Current directory
-      run: pwd && ls -l
     - name: Commit files
       run: |
+        cd ./build
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git remote -v
+        git remote set-url origin https://github.com/Jeevan-Kishore/konnect-web.git
+        git remote -v
         git commit -m "Add build changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACTION_TOKEN }}
         repository: "https://github.com/Jeevan-Kishore/konnect-web.git"
         branch: "master"
+        directory: "./build"
