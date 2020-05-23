@@ -1,0 +1,14 @@
+.wrapper {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right 100px;
+  background-attachment: scroll;
+  background-color: var(--backgroundColor);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: var(--containerWidth);
+  margin-top: 20px;
+}

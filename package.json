@@ -158,8 +158,6 @@
     ],
     "*.{css,scss}": [
       "npx prettier --write"
-    ],
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    ]
   }
 }

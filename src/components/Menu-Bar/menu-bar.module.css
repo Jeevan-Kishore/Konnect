@@ -1,0 +1,25 @@
+.wrapper {
+  height: 56px;
+  padding: 10px 10px 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--headerBgColor);
+  display: flex;
+}
+
+.logoContainer {
+  height: inherit;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.listItemsContainer {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listItemsContainer li {
+  margin-left: 10px;
+}
