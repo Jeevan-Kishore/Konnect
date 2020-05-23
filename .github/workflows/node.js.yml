@@ -40,6 +40,6 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.ACTION_TOKEN }}
-        repository: "https://github.com/Jeevan-Kishore/konnect-web.git"
+        repository: "Jeevan-Kishore/konnect-web"
         branch: "master"
         directory: "./build"
