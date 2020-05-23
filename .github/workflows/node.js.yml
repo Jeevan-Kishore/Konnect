@@ -53,4 +53,4 @@ jobs:
         github_token: ${{ secrets.ACTION_TOKEN }}
         repository: "Jeevan-Kishore/konnect-web"
         branch: "master"
-        directory: "./build"
+        directory: "./konnect-web"
