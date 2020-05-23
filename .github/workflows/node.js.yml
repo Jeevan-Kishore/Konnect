@@ -26,12 +26,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+    - name: Clone web repo
+      run: git clone https://github.com/Jeevan-Kishore/konnect-web.git
+    - name: Check files
+      run: ls -la
+    - name: Remove existing files
+      working-directory: ./konnect-web
+      run: rm -rf ./*
+    - name: Copy files to repo
+      run: cp ./build/* ./konnect-web/
     - name: Commit files
-      working-directory: ./build
+      working-directory: ./konnect-web
       run: |
         git config --local --unset-all "http.https://github.com/.extraheader"
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git init
         git remote -v
         git remote set-url origin https://github.com/Jeevan-Kishore/konnect-web.git
         git remote -v
