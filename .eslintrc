@@ -25,7 +25,7 @@
   },
   "rules": {
     "jest/valid-expect": 0,
-    "max-len": ["warn", { "code": 120 }],
+    "max-len": ["off", { "code": 120 }],
     "no-return-await": "off"
   },
   "settings": {
