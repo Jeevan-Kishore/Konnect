@@ -27,8 +27,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Commit files
+      working-directory: ./build
       run: |
-        cd ./build
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git remote -v
