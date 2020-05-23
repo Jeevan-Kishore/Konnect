@@ -34,7 +34,7 @@ jobs:
       working-directory: ./konnect-web
       run: rm -rf ./*
     - name: Copy files to repo
-      run: cp -r ./build/* ./konnect-web/
+      run: cp -rp ./build/* ./konnect-web/
     - name: Commit files
       working-directory: ./konnect-web
       run: |
