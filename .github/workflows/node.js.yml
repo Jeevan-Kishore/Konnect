@@ -38,14 +38,15 @@ jobs:
     - name: Commit files
       working-directory: ./konnect-web
       run: |
+        git init
         git config --local --unset-all "http.https://github.com/.extraheader"
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git init
         git remote -v
         git remote set-url origin https://github.com/Jeevan-Kishore/konnect-web.git
         git remote -v
         git add . -f
+        git status
         git commit -m "Add build changes"
     - name: Push changes
       uses: ad-m/github-push-action@master
