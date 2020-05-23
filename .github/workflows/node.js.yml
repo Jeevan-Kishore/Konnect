@@ -32,9 +32,14 @@ jobs:
       run: ls -la
     - name: Remove existing files
       working-directory: ./konnect-web
-      run: rm -rf ./*
+      run: |
+        ls -la
+        rm -rf *
+        ls -la
     - name: Copy files to repo
-      run: cp -rp ./build/* ./konnect-web/
+      run: |
+        cp -rp ./build/* ./konnect-web/
+        cd ./konnect-web/ && ls -la
     - name: Commit files
       working-directory: ./konnect-web
       run: |
