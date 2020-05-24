@@ -1,25 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./card.module.css";
 
-export const Card = (props) => {
-  return (
-    <section className={styles.wrapper}>
-      <p>
-        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-        and typesetting industry. Lorem Ipsum has been the industry&apos;s
-        standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book.
-      </p>
-      <p>
-        It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged.
-      </p>
-      <p>
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
-      </p>
-    </section>
-  );
+export const Card = ({ children }) => {
+  return <section className={styles.wrapper}>{children}</section>;
+};
+
+Card.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
