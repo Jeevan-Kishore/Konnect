@@ -7,7 +7,7 @@ import { Card } from "./components/Card";
 
 function App() {
   return (
-    <>
+    <div className={styles.topLevel}>
       <MenuBar />
       <div
         className={styles.wrapper}
@@ -23,7 +23,7 @@ function App() {
           <Card />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

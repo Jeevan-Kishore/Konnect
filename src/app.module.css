@@ -1,13 +1,16 @@
+.topLevel {
+  background-color: var(--backgroundColor);
+}
+
 .wrapper {
   height: 100%;
   background-repeat: no-repeat;
   background-position: right 100px;
   background-attachment: fixed;
-  background-color: var(--backgroundColor);
-  margin-left: 15%;
 }
 
 .container {
   width: var(--containerWidth);
   margin-top: 20px;
+  margin-left: 5%;
 }
