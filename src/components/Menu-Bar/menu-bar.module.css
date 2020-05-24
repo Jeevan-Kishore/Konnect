@@ -1,16 +1,16 @@
 .wrapper {
   height: 56px;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 0 10px;
   position: sticky;
   top: 0;
   background-color: var(--headerBgColor);
   display: flex;
+  justify-content: space-around;
 }
 
 .logoContainer {
   height: inherit;
   width: 200px;
-  margin-left: 20px;
 }
 
 .listItemsContainer {
