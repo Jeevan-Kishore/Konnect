@@ -4,6 +4,7 @@ import styles from "./app.module.css";
 import mySvg from "./svg/tree.svg";
 import { MenuBar } from "./components/Menu-Bar";
 import { Card } from "./components/Card";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Card />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

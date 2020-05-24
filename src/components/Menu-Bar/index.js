@@ -4,7 +4,7 @@ import { KonnectLogo } from "../Logo";
 
 export const MenuBar = (props) => {
   return (
-    <div className={styles.wrapper}>
+    <header className={styles.wrapper}>
       <div className={styles.logoContainer}>
         <KonnectLogo />
       </div>
@@ -13,6 +13,6 @@ export const MenuBar = (props) => {
         <li>sec</li>
         <li>third</li>
       </ul>
-    </div>
+    </header>
   );
 };
