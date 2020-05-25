@@ -1,0 +1,14 @@
+.fontStyle {
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+.firstTitle {
+  composes: fontStyle;
+  color: var(--firstTitleColor);
+}
+
+.secondTitle {
+  composes: fontStyle;
+  color: var(--secondTitleColor);
+}

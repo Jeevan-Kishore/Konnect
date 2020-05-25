@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
-import { HeartLogo } from "../HeartLogo";
-import { CopyrightLogo } from "../CopyrightLogo";
+import { HeartLogo } from "../Logos/Heart-Logo";
+import { CopyrightLogo } from "../Logos/Copyright-Logo";
 export const Footer = (props) => {
   return (
     <footer className={styles.wrapper}>

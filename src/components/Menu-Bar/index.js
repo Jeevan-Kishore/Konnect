@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./menu-bar.module.css";
-import { KonnectLogo } from "../Logo";
+import { KonnectLogo } from "../Logos/Konnect-Logo";
 
 export const MenuBar = (props) => {
   return (

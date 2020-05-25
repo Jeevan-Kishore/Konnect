@@ -1,12 +1,12 @@
 import React from "react";
-import "./media-query.css";
 import styles from "./app.module.css";
 import mySvg from "./svg/tree.svg";
 import { MenuBar } from "./components/Menu-Bar";
 import { Card } from "./components/Card";
 import { Footer } from "./components/Footer";
-import { getAboutUs } from "./data-generators/about-us";
-import { getWhyUs } from "./data-generators/why-us";
+import { AboutUs } from "./components/data-components/about-us";
+import { WhyUs } from "./components/data-components/why-us";
+import { Intro } from "./components/data-components/intro";
 
 function App() {
   return (
@@ -17,8 +17,13 @@ function App() {
         style={{ backgroundImage: `url(${mySvg})` }}
       >
         <div className={styles.container}>
-          <Card>{getAboutUs()}</Card>
-          <Card>{getWhyUs()}</Card>
+          <Intro />
+          <Card>
+            <AboutUs />
+          </Card>
+          <Card>
+            <WhyUs />
+          </Card>
         </div>
       </div>
       <Footer />

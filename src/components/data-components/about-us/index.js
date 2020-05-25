@@ -1,15 +1,7 @@
 import React from "react";
 
-export const getAboutUs = () => (
+export const AboutUs = () => (
   <>
-    <p>Exceptional Connections in a Complex World.</p>
-    <p>
-      To succeed in the complex world of technology, you need exceptional
-      connections - to the right experts, the right opportunities and the right
-      answers. You&apos;ll find us right in the centre of this ever-changing
-      technological world – uncovering opportunities and connecting
-      possibilities.
-    </p>
     <p>
       Konnect connects the very best IT and BPO professionals to great
       opportunities at leading companies. And we do it every single day – for

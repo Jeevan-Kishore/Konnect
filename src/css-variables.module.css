@@ -1,0 +1,9 @@
+/* Common */
+
+:root {
+  --backgroundColor: #f6fafa;
+  --headerBgColor: #fff;
+  --cardBgColor: #fff;
+  --firstTitleColor: #a3acba;
+  --secondTitleColor: #000;
+}

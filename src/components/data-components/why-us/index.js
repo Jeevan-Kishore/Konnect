@@ -1,5 +1,5 @@
 import React from "react";
-export const getWhyUs = () => (
+export const WhyUs = () => (
   <>
     <ul>
       <li>COMPANY HISTORY</li>
