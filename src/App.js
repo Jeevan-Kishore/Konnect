@@ -1,33 +1,44 @@
-import React from "react";
-import styles from "./app.module.css";
-import mySvg from "./svg/tree.svg";
-import { MenuBar } from "./components/Menu-Bar";
-import { Card } from "./components/Card";
-import { Footer } from "./components/Footer";
-import { AboutUs } from "./components/data-components/about-us";
-import { WhyUs } from "./components/data-components/why-us";
-import { Intro } from "./components/data-components/intro";
+import React, { useRef, useEffect } from 'react';
+import { useLocation, Switch } from 'react-router-dom';
+import AppRoute from './utils/AppRoute';
+import ScrollReveal from './utils/ScrollReveal';
+import ReactGA from 'react-ga';
 
-function App() {
+// Layouts
+import LayoutDefault from './layouts/LayoutDefault';
+
+// Views 
+import Home from './views/Home';
+
+// Initialize Google Analytics
+ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+
+const trackPage = page => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
+
+const App = () => {
+
+  const childRef = useRef();
+  let location = useLocation();
+
+  useEffect(() => {
+    const page = location.pathname;
+    document.body.classList.add('is-loaded')
+    childRef.current.init();
+    trackPage(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
   return (
-    <div className={styles.topLevel}>
-      <MenuBar />
-      <div
-        className={styles.wrapper}
-        style={{ backgroundImage: `url(${mySvg})` }}
-      >
-        <div className={styles.container}>
-          <Intro />
-          <Card>
-            <AboutUs />
-          </Card>
-          <Card>
-            <WhyUs />
-          </Card>
-        </div>
-      </div>
-      <Footer />
-    </div>
+    <ScrollReveal
+      ref={childRef}
+      children={() => (
+        <Switch>
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+        </Switch>
+      )} />
   );
 }
 
